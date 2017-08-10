@@ -1,0 +1,19 @@
+{%extends "base.njk"%}
+
+{%block content%}
+  <div class="row">
+    {%for photo in photos%}
+      {{item(photo)}}
+    {%endfor%}
+  </div>
+{%endblock%}
+
+
+{%macro item(name)%}
+
+  <div class="col-xs-6 col-md-3">
+    <a href="{{name}}" class="thumbnail">
+      <img src="{{name}}" alt="...">
+    </a>
+  </div>
+{%endmacro%}
